@@ -43,25 +43,24 @@ public class BOJ2445 {
 		int n = sc.nextInt();
 		
 		for(int i = 1; i <= 2 * n - 1; i++) {
-			// i가 1~N일경우
-			if (i <= n) {
-				// 공백 찍기
-				for(int count = 0; count < n - i; count++) {
-					System.out.print(" ");
-				}
-				// 별 찍기
-				for(int count = 0; count < 2 * i - 1; count++) {
+			if(i <= 5) {
+				for(int count = 0; count < i; count++) {
 					System.out.print("*");
 				}
-			}
-
-			if (n < i) {
-				// 공백 찍기
-				for(int count = 0; count < i - n; count++) {
+				for(int count = 0; count < 2 * (n - i); count++) {
 					System.out.print(" ");
 				}
-				// 별 찍기
-				for(int count = 0; count < (2 * n - i) * 2 - 1; count++) {
+				for(int count = 0; count < i; count++) {
+					System.out.print("*");
+				}
+			} else {
+				for(int count = 0; count < 2 * n - i; count++) {
+					System.out.print("*");
+				}
+				for(int count = 0; count < 2 * (i - n); count++) {
+					System.out.print(" ");
+				}
+				for(int count = 0; count < 2 * n - i; count++) {
 					System.out.print("*");
 				}
 			}
